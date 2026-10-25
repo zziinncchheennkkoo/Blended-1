@@ -43,12 +43,12 @@ console.log(getDeliveryPrice('drone')); // -1
 
 // task-4
 function showPackingProgress(quantity) {
-  for (let i = 1; i <= 3; i++) {
-    if (quantity <= 0) {
-      console.log('Немає товарів для пакування');
-      return;
-    }
+  if (quantity <= 0) {
+    console.log('Немає товарів для пакування');
+    return;
+  }
 
+  for (let i = 1; i <= quantity; i++) {
     console.log(`Пакуємо товар ${i} з ${quantity}`);
   }
 }
